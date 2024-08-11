@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quico Basquet</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="./images/logo.png" alt="logo">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="icons-nav">
+                <i class="menu-icon bi bi-list"></i>
+                <i class="close-icon bi bi-x"></i>
+            </label>
+
+        <nav class="nav">
+            <a href="#inicio" style="--i:0;">Inicio</a>
+            <a href="#reservas" style="--i:1;">Reservas</a>
+            <a href="#quienes-somos" style="--i:2;">Quienes somos</a>
+            <a href="#contacto" style="--i:3;">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="banner" id="inicio">
+        <div class="content-banner">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, reprehenderit ab! Animi, et. Fugit officiis ducimus similique perferendis at iusto.</p>
+        </div>
+    </section>
+
+    <main class="main">
+
+        <section class="reservas" id="reservas">
+
+            <div class="tab-nav-bar">
+                <div class="tab-navigation">
+    
+                    <ul class="tab-menu">
+                        <li class="tab-btn active">Reservas</li>
+                        <li class="tab-btn">Informacion</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="tab-content">
+    
+                <div class="tab-reservas active">
+                    <div class="row">
+
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="titulo-reservas">Reservaciones</h2>
+                                <div class="description">
+                                    <!-- Principio del widget integrado de Calendly -->
+                                    <div class="calendly-inline-widget" data-url="https://calendly.com/quico-basquet?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                                    <!-- Final del widget integrado de Calendly -->
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tab-content">
+                <div class="tab-reservas">
+                    <div class="row">
+                        <div class="right-column">
+                            <div class="info">
+                                <h2 class="titulo-reservas horarios">Servicios</h2>
+                                <div class="description">
+                                    <p><i class="bi bi-gender-ambiguous"></i> Baño unisex </p>
+                                    <p><i class="bi bi-person-wheelchair"></i> Baño para discapacitados</p>
+                                    <p><i class="bi bi-dribbble"></i> Vestuario</p>
+                                    <p><i class="bi bi-cup-straw"></i> Cantina</p>
+                                    <p><i class="bi bi-wifi"></i> Wifi</p>
+                                    <p><i class="bi bi-car-front-fill"></i> Estacionamiento</p>
+                                </div>
+                                <h2 class="titulo-reservas horarios">Horarios</h2>
+                                <div class="description">
+                                    <p><i class="bi bi-clock-history"></i> Lunes a domingo de 08hs a 00hs.</p>
+                                </div>
+                                <h2 class="titulo-reservas horarios">Redes sociales</h2>
+                                <div class="description">
+                                    <a href="https://www.instagram.com/quicobasquet" target="_blank"><i class="bi bi-instagram"></i> @QuicoBasquet</a>
+                                    <a href="" target="_blank"><i class="bi bi-whatsapp"></i> 0343 468 2439</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <section class="quienes-somos" id="quienes-somos">
+
+            <div class="row-quienes">
+
+                <div class="imgWrapper">
+                    <img src="./images/example-2.jpg" alt="">
+                </div>
+
+                <div class="contentWrapper">
+                    <div class="content-quienes">
+                        <span class="textWrapper">
+                            <span></span>Quienes somos
+                        </span>
+                        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, modi.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, quis veritatis odit eaque nobis sunt nemo aut ullam, nulla dolore quisquam facere aperiam perferendis, quibusdam voluptas beatae impedit asperiores eius.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="contacto" id="contacto">
+            <div class="container-contacto">
+                <h2>Contactanos</h2>
+
+                <div class="content-contacto">
+
+                    <div class="contacto-form">
+                        <h3>Déjanos tu mensaje.</h3>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                            <input type="hidden" name="redirect" value="https://algun-sitio">
+
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="E-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                            </div>
+                            <button class="btn-contact" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                
+                    <div class="info-contacto">
+                        <h3>Información</h3>
+                        <p><i class="bi bi-telephone"></i> 0343 468 2439</p>
+                        <p><i class="bi bi-envelope"></i> club@example.com</p>
+                        <p><i class="bi bi-geo-alt"></i> Av. Almafuerte 2500, Paraná, Entre Ríos.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/quicobasquet" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#quienes-somos">Quienes somos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const select = document.querySelector
+    </script>
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>

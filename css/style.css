@@ -1,0 +1,639 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'archivo';
+    src: url(/fonts/Archivo-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'onoma';
+    src: url(/fonts/onoma.otf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --box-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+    --text-shadow: 0 5px 25px rgb(2, 2, 2, 0.1);
+}
+
+/******* navbar ********/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+}
+
+.logo{
+    width: 5%;
+    cursor: pointer;
+}
+
+.nav a{
+    font-size: 16px;
+    color: #121212;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    font-family: 'onoma';
+    text-transform: uppercase;
+}
+
+.icons-nav{
+    font-size: 2.8rem;
+    color: #121212;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 5%;
+}
+
+#check{
+    display: none;
+}
+
+/********* banner *********/
+
+.banner{
+    background-image: linear-gradient(#04091eb3,#04091eb3), url(/images/example-1.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.content-banner{
+    width: 90%;
+    color: #EEEDEB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.content-banner h1{
+    font-size: 40px;
+    font-family: 'onoma';
+}
+
+.content-banner p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    font-family: 'archivo';
+}
+
+/******** quienes somos *********/
+
+.quienes-somos{
+    display: grid;
+    place-items: center;
+}
+
+.row-quienes{
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    overflow-x: hidden;
+    padding: 5rem 0;
+}
+
+.row-quienes .imgWrapper{
+    overflow: hidden;
+}
+
+.row-quienes .imgWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.row-quienes .imgWrapper:hover img{
+    transform: scale(1.25);
+}
+
+.row-quienes .contentWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.row-quienes .contentWrapper span.textWrapper{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: 'onoma';
+    color: #A568A6;
+}
+
+.row-quienes .contentWrapper span.textWrapper span{
+    display: inline-block;
+    background: #A568A6;
+    width: 40px;
+    height: 3px;
+}
+
+.row-quienes .contentWrapper h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #555;
+    padding-bottom: 20px;
+    font-family: 'onoma';
+}
+
+.row-quienes .contentWrapper p{
+    font-size: 16px;
+    line-height: 25px;
+    padding-bottom: 25px;
+    font-family: 'archivo';
+}
+
+/******** contact ************/
+
+.contacto{
+    min-height: 100vh;
+    background-color: #EEEDEB;
+    padding: 50px;
+    text-align: center;
+}
+
+.container-contacto{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10rem;
+}
+
+.container-contacto h2{
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'onoma';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #A568A6;
+}
+
+.content-contacto{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.contacto-form{
+    text-align: left;
+}
+
+.contacto-form h3{
+    font-size: 24px;
+    font-family: 'archivo';
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'archivo';
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    box-shadow: 0 0 8px #bbb;
+}
+
+.btn-contact{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #EEEDEB;
+    color: #A568A6;
+    border: 2px solid #A568A6;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.btn-contact:hover{
+    background-color: #A568A6;
+    color: #EEEDEB;
+}
+
+.info-contacto{
+    text-align: left;
+}
+
+.info-contacto h3{
+    font-size: 24px;
+    font-family: 'archivo';
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-contacto p{
+    margin-bottom: 10px;
+    color: #555;
+    font-family: 'archivo';
+}
+
+.info-contacto i{
+    color: #A568A6;
+    margin-right: 10px;
+}
+
+/********** reservas **********/
+
+.reservas{
+    position: relative;
+    padding: 0 80px;
+    transition: 0.5s ease;
+    background: #EEEDEB;
+    height: 100vh;
+}
+
+.tab-navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.tab-menu{
+    color: #f8f9fa;
+    list-style: none;
+    background: #333;
+    max-width: 800px;
+    padding: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid #333;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+    user-select: none;
+}
+
+.tab-menu li{
+    font-family: 'archivo';
+}
+
+.tab-btn{
+    color: #f8f9fa;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 2px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s ease;
+}
+
+.tab-btn:hover{
+    background: #555;
+}
+
+.tab-btn.active{
+    background: #A568A6;
+}
+
+.tab-nav-bar{
+    position: relative;
+    padding-top: 10rem;
+}
+
+.tab-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab-reservas{
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    max-width: 1100px;
+    padding: 15px 50px;
+    transform: translateX(25px);
+    content-visibility: hidden;
+    opacity: 0;
+}
+
+.tab-reservas.active{
+    transform: translateX(0);
+    content-visibility: visible;
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.tab-reservas .row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 5px;
+}
+
+.right-column{
+    max-width: 800px;
+}
+
+.info .titulo-reservas,
+.info .description p{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info .titulo-reservas{
+    text-align: center;
+}
+
+.info .titulo-reservas{
+    font-size: 2em;
+    font-family: 'onoma';
+}
+
+.info .horarios{
+ text-align: left;
+}
+
+.info .description p{
+    font-family: 'archivo';
+}
+
+.info .description i{
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #A568A6;
+}
+
+.info .description a i{
+    font-size: 1.5rem;
+}
+
+.info .description a{
+    text-decoration: none;
+    font-family: 'archivo';
+    color: #333;
+}
+
+/********** footer ************/
+
+footer{
+    background-color: #333;
+}
+
+.footer-container{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a{
+    text-decoration: none;
+    background-color: #333;
+    margin: 10px;
+    display: inline-block;
+}
+
+.social-links a i{
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.social-links a:hover{
+    transition: 0.3s ease;
+}
+
+.social-links a:hover i{
+    color: #A568A6;
+    transition: 0.5s;
+}
+
+.footer-nav{
+    margin: 30px 0;
+}
+
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer-nav a{
+    font-family: 'onoma';
+    font-size: 18px;
+}
+
+.footer-nav ul li a{
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font: 1.3rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover{
+    opacity: 1;
+}
+
+/********* responsive ********/
+
+@media screen and (max-width: 1050px) {
+    .reservas{
+        padding: 0 0px;
+    }
+
+    .tab-nav-bar{
+        padding: 65px 20px 40px 25px;
+    }
+
+    .tab-reservas{
+        padding: 15px 25px;
+    }
+
+    .tab-reservas .row{
+        flex-direction: column;
+    }
+
+    .info .titulo-reservas{
+        font-size: 27px;
+    }
+}
+
+@media(max-width: 991px){
+    header{
+        padding: 1.3rem 5%;
+    }
+
+    .row-quienes{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    .row-quienes .contentWrapper{
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .row-quienes{
+        width: 90%;
+    }
+
+    .row-quienes .contentWrapper h2{
+        font-size: 30px;
+    }
+
+    .row-quienes .contentWrapper p{
+        line-height: 24px;
+    }
+
+    .container-contacto{
+        padding: 40px;
+    }
+    .content-contacto{
+        grid-template-columns: 1fr;
+    }
+
+    .icons-nav{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons-nav .menu-icon{
+        display: none;
+    }
+
+    .icons-nav .close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons-nav .close-icon{
+        display: block;
+    }
+
+    .nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #fff;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.nav{
+        height: 17.7rem;
+    }
+
+    .nav a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.nav a{
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+}
+
+@media (max-width: 700px){
+    .footer-nav ul{
+        flex-direction: column;
+    }
+
+    .footer-nav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 575px){
+    .row-quienes .contentWrapper span.textWrapper{
+        font-size: 18px;
+    }
+
+    .row-quienes .contentWrapper h2{
+        font-size: 25px;
+    }
+
+    .row-quienes .contentWrapper p{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .container-contacto h2{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 375px){
+    .container-contacto h2{
+        font-size: 28px;
+    }
+    
+}
