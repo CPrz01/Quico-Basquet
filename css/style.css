@@ -493,6 +493,12 @@ footer{
 
 /********* responsive ********/
 
+@media (max-width: 1440px){
+    .logo{
+        width: 7%;
+    }
+}
+
 @media screen and (max-width: 1050px) {
     .reservas{
         padding: 0 0px;
@@ -598,6 +604,10 @@ footer{
         transition-delay: calc(.15s * var(--i));
     }
 
+    .logo{
+        width: 10%;
+    }
+
 }
 
 @media (max-width: 700px){
@@ -628,6 +638,10 @@ footer{
 
     .container-contacto h2{
         font-size: 30px;
+    }
+
+    .logo{
+        width: 15%;
     }
 }
 
