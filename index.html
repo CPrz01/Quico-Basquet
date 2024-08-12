@@ -56,10 +56,23 @@
                             <div class="info">
                                 <h2 class="titulo-reservas">Reservaciones</h2>
                                 <div class="description">
-                                    <!-- Principio del widget integrado de Calendly -->
-                                    <div class="calendly-inline-widget" data-url="https://calendly.com/quico-basquet?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-                                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                                    <!-- Final del widget integrado de Calendly -->
+                                    <!-- Google Calendar Appointment Scheduling begin -->
+                                    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                                    <script>
+                                    (function() {
+                                    var target = document.currentScript;
+                                    window.addEventListener('load', function() {
+                                        calendar.schedulingButton.load({
+                                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Y5BD02_D-c9bpZY-S-DHLST6imd62rnlDS8GNbO4htqH22V9C0ujZDdBxd_ckqje_eEn4d-86?gv=true',
+                                        color: '#616161',
+                                        label: "Basquet - 1 Hora",
+                                        target,
+                                        });
+                                    });
+                                    })();
+                                    </script>
+                                    <!-- end Google Calendar Appointment Scheduling -->
                                 </div>
                             </div>
                         </div>
